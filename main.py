@@ -1,8 +1,8 @@
 ﻿import asyncio
 
 from loader import bot, dp, logger
-from .routes import router
-from .stats import init_db
+from routes import router
+from stats import init_db
 
 
 async def main() -> None:
@@ -14,4 +14,5 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
