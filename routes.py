@@ -5,9 +5,9 @@ from aiogram.exceptions import TelegramBadRequest
 from aiogram.filters import Command, CommandStart
 from aiogram.types import ErrorEvent, InlineKeyboardButton, InlineKeyboardMarkup
 
-from .config import ADMIN_ID, CONTACT_LINK, PAYMENT_LINK
-from .loader import bot, logger
-from .stats import (
+from config import ADMIN_ID, CONTACT_LINK, PAYMENT_LINK
+from loader import bot, logger
+from stats import (
     active_users_last_days,
     add_order_event,
     new_users_today,
@@ -283,3 +283,4 @@ async def user_message_to_admin(message: types.Message) -> None:
 @router.error()
 async def on_error(event: ErrorEvent) -> None:
     logger.exception("Unhandled error: %s", event.exception)
+
